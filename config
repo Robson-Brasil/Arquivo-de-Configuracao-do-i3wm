@@ -177,8 +177,8 @@ bindsym $mod+r mode "resize"
 ##Minhas Teclas de Atalho##
 bindsym Print exec scrot 'My_i3-gaps_%a-%d%b%y_%H.%M.png' -e 'viewnior ~/$f'
 bindsym $mod+Shift+d exec dmenu_run -fn "Ubuntu-18"
-bindsym $alt+tab exec albert
-
+#bindsym $alt+tab exec albert
+bindsym $mod+z exec sh ~/rofi.sh
 
 ##Bordas e cores##
 for_window [class="^.*"] border pixel 3
@@ -192,7 +192,6 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
@@ -200,5 +199,5 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2 &
 exec --no-startup-id sh .fehbg
-exec --no-startup-id rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme solarized -font "hack 10"
-exec --no-startup-id albert
+#exec --no-startup-id rofi -modi run,drun -show drun -show-icons -drun-icon-theme Adwaita -scroll-method 1 -sidebar-mode -theme solarized -font "hack 10"
+#exec --no-startup-id albert
